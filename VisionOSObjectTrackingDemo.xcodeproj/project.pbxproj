@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7202FB7A2C77DD0F00EDC88D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0F04F7D62C3A47A900A2F072 /* ObjectTrackingRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTrackingRealityView.swift; sourceTree = "<group>"; };
 		0F04F7D82C3A47FC00A2F072 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -47,7 +59,13 @@
 		0F912B7B2C3A30AB00D44DEF /* VisionOSObjectTrackingDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOSObjectTrackingDemoTests.swift; sourceTree = "<group>"; };
 		0F9FD91F2C3B386F0036220F /* PS5_Controller_Trained.referenceobject */ = {isa = PBXFileReference; lastKnownFileType = file.referenceobject; path = PS5_Controller_Trained.referenceobject; sourceTree = "<group>"; };
 		0F9FD9202C3B386F0036220F /* Toy_Trained.referenceobject */ = {isa = PBXFileReference; lastKnownFileType = file.referenceobject; path = Toy_Trained.referenceobject; sourceTree = "<group>"; };
+		7202FB7C2C77DD0F00EDC88D /* libObjectTrackingPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectTrackingPlugin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7202FB762C77D91B00EDC88D /* UnityIntegration */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UnityIntegration; sourceTree = "<group>"; };
+		7202FB7D2C77DD0F00EDC88D /* ObjectTrackingPlugin */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ObjectTrackingPlugin; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0F912B592C3A30A900D44DEF /* Frameworks */ = {
@@ -59,6 +77,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0F912B742C3A30AB00D44DEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7202FB792C77DD0F00EDC88D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -103,6 +128,7 @@
 				0F912B5E2C3A30A900D44DEF /* VisionOSObjectTrackingDemo */,
 				0F912B5F2C3A30A900D44DEF /* Packages */,
 				0F912B7A2C3A30AB00D44DEF /* VisionOSObjectTrackingDemoTests */,
+				7202FB7D2C77DD0F00EDC88D /* ObjectTrackingPlugin */,
 				0F912B5D2C3A30A900D44DEF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +138,7 @@
 			children = (
 				0F912B5C2C3A30A900D44DEF /* VisionOSObjectTrackingDemo.app */,
 				0F912B772C3A30AB00D44DEF /* VisionOSObjectTrackingDemoTests.xctest */,
+				7202FB7C2C77DD0F00EDC88D /* libObjectTrackingPlugin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +146,7 @@
 		0F912B5E2C3A30A900D44DEF /* VisionOSObjectTrackingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7202FB762C77D91B00EDC88D /* UnityIntegration */,
 				0F912B632C3A30A900D44DEF /* VisionOSObjectTrackingDemoApp.swift */,
 				0F04F7D52C3A479B00A2F072 /* Views */,
 				0F04F7D22C3A472200A2F072 /* Helpers */,
@@ -194,6 +222,28 @@
 			productReference = 0F912B772C3A30AB00D44DEF /* VisionOSObjectTrackingDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7202FB7B2C77DD0F00EDC88D /* ObjectTrackingPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7202FB802C77DD0F00EDC88D /* Build configuration list for PBXNativeTarget "ObjectTrackingPlugin" */;
+			buildPhases = (
+				7202FB782C77DD0F00EDC88D /* Sources */,
+				7202FB792C77DD0F00EDC88D /* Frameworks */,
+				7202FB7A2C77DD0F00EDC88D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7202FB7D2C77DD0F00EDC88D /* ObjectTrackingPlugin */,
+			);
+			name = ObjectTrackingPlugin;
+			packageProductDependencies = (
+			);
+			productName = ObjectTrackingPlugin;
+			productReference = 7202FB7C2C77DD0F00EDC88D /* libObjectTrackingPlugin.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +260,9 @@
 					0F912B762C3A30AB00D44DEF = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 0F912B5B2C3A30A900D44DEF;
+					};
+					7202FB7B2C77DD0F00EDC88D = {
+						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
@@ -228,6 +281,7 @@
 			targets = (
 				0F912B5B2C3A30A900D44DEF /* VisionOSObjectTrackingDemo */,
 				0F912B762C3A30AB00D44DEF /* VisionOSObjectTrackingDemoTests */,
+				7202FB7B2C77DD0F00EDC88D /* ObjectTrackingPlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +326,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F912B7C2C3A30AB00D44DEF /* VisionOSObjectTrackingDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7202FB782C77DD0F00EDC88D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +489,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -454,6 +516,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -463,7 +526,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N785YC5D6V;
+				DEVELOPMENT_TEAM = C629FJ4DA4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.learnxr.VisionOSObjectTrackingDemoTests;
@@ -483,7 +546,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N785YC5D6V;
+				DEVELOPMENT_TEAM = C629FJ4DA4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.learnxr.VisionOSObjectTrackingDemoTests;
@@ -493,6 +556,36 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 7;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VisionOSObjectTrackingDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VisionOSObjectTrackingDemo";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		7202FB812C77DD0F00EDC88D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C629FJ4DA4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		7202FB822C77DD0F00EDC88D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C629FJ4DA4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -523,6 +616,15 @@
 			buildConfigurations = (
 				0F912B832C3A30AB00D44DEF /* Debug */,
 				0F912B842C3A30AB00D44DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7202FB802C77DD0F00EDC88D /* Build configuration list for PBXNativeTarget "ObjectTrackingPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7202FB812C77DD0F00EDC88D /* Debug */,
+				7202FB822C77DD0F00EDC88D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
